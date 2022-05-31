@@ -51,7 +51,7 @@ export function GameProvider({ children }) {
         setScore(score + 1);
         break;
       default:
-        console.log("default stuff or error, duh")
+        console.log("Something went wrong.")
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userChoice, houseChoice]);
