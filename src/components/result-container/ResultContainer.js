@@ -32,16 +32,22 @@ export const ResultContainer = () => {
         <ResultBtn choice={userChoice} />
       </motion.div>
 
-      <motion.div
-        className="result-display"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 5.5 }}
-      >
-        <h1>{result}</h1>
-        <button onClick={resetUserChoice}>Play again</button>
-        <button onClick={resetGame}>Reset game</button>
-      </motion.div>
+      <div className="result-display">
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.75 }}
+        >{result}</motion.h1>
+        <motion.div
+          className="options-btn-container"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 5.5 }}
+        >
+          <button onClick={resetUserChoice}>Play again</button>
+          <button onClick={resetGame}>Reset game</button>
+        </motion.div>
+      </div>
 
       <motion.div
         className="choice-container"
