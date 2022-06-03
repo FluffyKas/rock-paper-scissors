@@ -47,8 +47,10 @@ export function GameProvider({ children }) {
       case "lizardpaper":
       case "spockscissors":
       case "spockrock":
-        setResult("USER WINS");
-        setScore(score + 1);
+        setResult("YOU WIN");
+        setTimeout(() => {
+          setScore(score + 1);
+        }, "2750")
         break;
       default:
         console.log("Something went wrong.")
